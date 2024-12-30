@@ -107,14 +107,14 @@ section {
 }
 
 .header .logo {
-  font-size: 2.5rem;
-  color: var(--black);
-  text-transform: capitalize;
+  width: 100px;
+  height: 100px;
+}
+.footer .logo {
+  width: 150px;
+  height: 150px;
 }
 
-.header .logo span {
-  color: var(--yellow);
-}
 
 .header .navbar a {
   font-size: 2rem;
@@ -962,3 +962,431 @@ section {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+::root {
+  --text-color: #e5e5e5;
+  --background-color: #000000; /* Black background */
+  --hover-color: #ffffff; /* White for hover effects */
+  --box-background: #1a1a1a; /* Slightly lighter black for boxes */
+  --box-padding: 2rem;
+  --heading-color: #ffffff;
+}
+
+.footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 4rem 2rem;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-box {
+  background-color: var(--box-background);
+  padding: var(--box-padding);
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked vertically */
+}
+
+.footer-logo {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.footer-box h4 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem; /* Bigger heading */
+  color: var(--heading-color);
+  border-bottom: 2px solid var(--text-color);
+  padding-bottom: 0.5rem;
+}
+
+.footer-box.footer-social h4 {
+  margin-left: 2rem; /* Move the title a little to the right */
+}
+
+.footer-box p {
+  line-height: 2;
+  font-size: 1.8rem; /* Bigger font size for paragraphs */
+  margin-bottom: 1rem;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.8rem; /* Bigger font size for links */
+}
+
+.footer-contact a:hover {
+  color: var(--hover-color);
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap; /* Allow icons to wrap if needed */
+  justify-content: flex-start; /* Align to the left */
+  gap: 1.5rem;
+  margin-top: 1.5rem; /* Added margin to push icons below the title */
+}
+
+.social-icons a {
+  color: var(--text-color);
+  font-size: 3rem; /* Bigger icon size */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--hover-color);
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  text-align: center;
+  border-top: 1px solid var(--text-color);
+  padding-top: 2rem;
+  font-size: 1.4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on medium screens */
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Stack everything in one column for small screens */
+    gap: 2rem;
+  }
+
+  .footer-box h4 {
+    font-size: 2rem; /* Smaller heading font for mobile */
+  }
+
+  .footer-box p, .footer-contact a {
+    font-size: 1.6rem; /* Smaller font for paragraphs and links */
+  }
+
+  .social-icons a {
+    font-size: 2.5rem; /* Smaller icons for mobile */
+  }
+
+  .footer-bottom {
+    font-size: 1.2rem; /* Smaller text for footer bottom on mobile */
+  }
+}
+/* Global Reset for Margins and Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Profile Banner Container */
+.profile-banner {
+  display: flex; /* Ensures left and right sections are aligned side by side */
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%; /* Adjust width as needed */
+  max-width: 1200px;
+  height: 400px; /* Fixed height to control the size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section (Profile Image and Info) */
+.profile-left {
+  flex: 1;  /* Takes up 1/3 of the available space */
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+/* Profile Image Styling */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover; /* Makes sure the image fills the circle */
+  margin-bottom: 15px;
+}
+
+/* Profile Name and Position */
+.profile-info .profile-name {
+  font-size: 24px;
+  margin-top: 150px;
+}
+
+.profile-title {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Right Section (Experience Description) */
+.profile-right {
+  flex: 2;  /* Takes up 2/3 of the available space */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;  /* Aligns content vertically within */
+  justify-content: center;  /* Centers content vertically */
+}
+
+/* Experience Section Title */
+.experience-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Experience Description Text */
+.experience-description {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* User Profile Banner Container */
+.user-profile-banner {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;  /* Ensures it takes full width of the parent container */
+  max-width: 1200px;  /* Optionally limit max width */
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: row-reverse;  /* Reverses the order of the flex items */
+}
+
+/* Left Section (Experience Description) - Now on the Left */
+.user-profile-left {
+  flex: 2;  /* Takes up 2 parts of the available space */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-experience-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.user-experience-description {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Right Section (Profile Image and Info) - Now on the Right */
+.user-profile-right {
+  flex: 1;  /* Takes up 1 part of the available space */
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.user-profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.user-profile-info .user-profile-name {
+  font-size: 24px;
+  margin-top: 150px;
+}
+
+.user-profile-title {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Contact Section */
+.contact-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* For .profile-banner */
+  .profile-banner {
+    flex-direction: column-reverse;  /* Stack image on top and text at the bottom */
+    height: auto;  /* Adjust height based on content */
+  }
+
+  .user-profile-banner {
+    flex-direction: column-reverse;  /* Stack image on top and text at the bottom */
+    height: auto;  /* Adjust height based on content */
+  }
+
+  /* Adjustments for profile-left and profile-right */
+  .profile-left, .profile-right, .user-profile-left, .user-profile-right {
+    width: 100%;  /* Ensure sections take full width */
+    padding: 15px;  /* Adjust padding for smaller screens */
+  }
+
+  .profile-img, .user-profile-img {
+    width: 120px;  /* Slightly smaller profile image */
+    height: 120px;
+  }
+
+  .experience-title, .user-experience-title {
+    font-size: 18px;
+  }
+
+  .experience-description, .user-experience-description {
+    font-size: 14px;
+  }
+}
+
+/* Title */
+.contact-container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Contact Item */
+.contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-item h2 {
+  font-size: 30px;
+  color: #444;
+}
+
+.contact-item p {
+  font-size: 18px;
+  color: #666;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+
+#projects {
+  padding: 50px;
+  background-color: #f4f4f4;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+#projects h3 {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.project-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Allows wrapping of items */
+}
+
+.project-item {
+  position: relative;
+  width: 23%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.project-item a {
+  display: block;
+  text-decoration: none;
+}
+
+.project-image {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.project-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.project-item:hover .project-image {
+  opacity: 0.7;
+}
+
+.project-item:hover .project-info {
+  opacity: 1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .project-item {
+    width: 30%; /* Adjust width for medium-sized screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .project-item {
+    width: 45%; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    width: 100%; /* Full width on very small screens */
+  }
+
+  #projects h2 {
+    font-size: 24px; /* Adjust heading size */
+  }
+
+  #projects h3 {
+    font-size: 24px; /* Adjust subheading size */
+  }
+}
