@@ -25,27 +25,9 @@ This website serves as a digital identity for **Mass Construction**, presenting 
 - 🌙 Dark/light theme support (if available in template)
 - 🚀 Hosted on [Vercel](https://vercel.com)
 
----
-
-## 🛠️ Tech Stack
-
-| Tech          | Usage                          |
-|---------------|--------------------------------|
-| **React.js**  | Frontend framework             |
-| **Vite.js**   | Lightning-fast dev environment |
-| **Tailwind CSS** | Utility-first styling        |
-| **Vercel**    | Deployment platform            |
 
 ---
 
-## 🧱 Pages Structure
-
-- **Home Page** – Introduction and tagline
-- **About Page** – Company background and philosophy
-- **Projects/Services** – Featured work or construction services offered
-- **Contact Page** – Email, phone, and inquiry form
-
----
 
 ## 🧑‍💻 Developer Note
 
