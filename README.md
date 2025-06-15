@@ -1,6 +1,7 @@
 # 🏗️ Mass Construction – Portfolio Website
 
-![Website Screenshot](https://mass-construction.vercel.app/preview.png) <!-- Optional: Add your own screenshot image here -->
+![image](https://github.com/user-attachments/assets/59feeb20-e645-499f-be54-d6fa0926d8d0)
+
 
 > A modern, responsive portfolio website built for **Mass Construction**, a civil contracting firm, to professionally showcase their services, projects, and contact details.
 
